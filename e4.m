@@ -1,0 +1,26 @@
+clc
+clear all
+x=imread('C:\Users\STUDENT\Desktop\oip.jpg') ;
+subplot(3,3,1)
+imshow('C:\Users\STUDENT\Desktop\oip.jpg');
+title('Original image')
+z=rgb2gray(x)
+subplot(3,3,2)
+imshow(z)
+title('Gray image')
+g=imnoise(z,'gaussian')
+subplot(3,3,3)
+imshow(g)
+title('gaussian noise image')
+sp= imnoise(z,'salt & pepper')
+subplot(3,3,4)
+imshow(sp)
+title('salt and pepper noise image')
+p= imnoise(z,'poisson')
+subplot(3,3,5)
+imshow(p)
+title('poisson noise image')
+s=imnoise(z,'speckle')
+subplot(3,3,6)
+imshow(s)
+title('speckle noise image’)
